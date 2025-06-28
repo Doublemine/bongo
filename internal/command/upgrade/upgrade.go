@@ -6,23 +6,23 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/go-nunu/nunu/config"
+	"github.com/doublemine/bongo/config"
 	"github.com/spf13/cobra"
 )
 
 var CmdUpgrade = &cobra.Command{
 	Use:     "upgrade",
-	Short:   "Upgrade the nunu command.",
-	Long:    "Upgrade the nunu command.",
-	Example: "nunu upgrade",
+	Short:   "Upgrade the bongo command.",
+	Long:    "Upgrade the bongo command.",
+	Example: "bongo upgrade",
 	Run: func(_ *cobra.Command, _ []string) {
-		fmt.Printf("go install %s\n", config.NunuCmd)
-		cmd := exec.Command("go", "install", config.NunuCmd)
+		fmt.Printf("go install %s\n", config.BongoCmd)
+		cmd := exec.Command("go", "install", config.BongoCmd)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 		if err := cmd.Run(); err != nil {
 			log.Fatalf("go install %s error\n", err)
 		}
-		fmt.Printf("\n🎉 Nunu upgrade successfully!\n\n")
+		fmt.Printf("\n🎉 Bongo upgrade successfully!\n\n")
 	},
 }

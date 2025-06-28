@@ -165,18 +165,18 @@ import (
 	"github.com/go-nunu/nunu-layout-advanced/pkg/log"
 	"github.com/redis/go-redis/v9"
 	"github.com/spf13/viper"
-	"gorm.io/driver/mysql"
-	"gorm.io/gorm"
+	"github.com/uptrace/bun"
+	"github.com/uptrace/bun/dialect/mysqldialect"
 	"time"
 )
 
 type Repository struct {
-	db     *gorm.DB
+	db     *bun.DB
 	rdb    *redis.Client
 	logger *log.Logger
 }
 
-func NewRepository(db *gorm.DB, rdb *redis.Client, logger *log.Logger) *Repository {
+func NewRepository(db *bun.DB, rdb *redis.Client, logger *log.Logger) *Repository {
 	return &Repository{
 		db:     db,
 		rdb:    rdb,
@@ -184,11 +184,9 @@ func NewRepository(db *gorm.DB, rdb *redis.Client, logger *log.Logger) *Reposito
 	}
 }
 
-func NewDB(conf *viper.Viper) *gorm.DB {
-	db, err := gorm.Open(mysql.Open(conf.GetString("data.mysql.user")), &gorm.Config{})
-	if err != nil {
-		panic(err)
-	}
+func NewDB(conf *viper.Viper) *bun.DB {
+	sqldb := sql.OpenDB(sqldriver.NewConnector(conf.GetString("data.mysql.user")))
+	db := bun.NewDB(sqldb, mysqldialect.New())
 	return db
 }
 func NewRedis(conf *viper.Viper) *redis.Client {
@@ -254,7 +252,7 @@ func (h *userHandler) GetUserById(ctx *gin.Context) {
 
 ## Banco de Dados
 
-O Nunu utiliza a biblioteca GORM para gerenciar bancos de dados. Você pode configurar o banco de dados no diretório `config`. Por exemplo:
+O Nunu utiliza a biblioteca Bun ORM para gerenciar bancos de dados. Você pode configurar o banco de dados no diretório `config`. Por exemplo:
 
 ```yaml
 data:

@@ -195,7 +195,7 @@ func NewApp(viperViper *viper.Viper, logger *log.Logger) (*gin.Engine, func(), e
 internal/handler/order.go            // 处理请求参数和响应
 internal/service/order.go            // 实现业务逻辑
 internal/repository/order.go         // 与数据库和Redis等交互
-internal/model/order.go              // 数据表实体，GORM model
+internal/model/order.go              // 数据表实体，Bun model
 ```
 
 ## 启动项目

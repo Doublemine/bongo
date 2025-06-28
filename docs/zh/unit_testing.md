@@ -229,8 +229,8 @@ import (
 	"github.com/go-nunu/nunu-layout-advanced/internal/repository"
 	"github.com/go-redis/redismock/v9"
 	"github.com/stretchr/testify/assert"
-	"gorm.io/driver/mysql"
-	"gorm.io/gorm"
+	"github.com/uptrace/bun"
+	"github.com/uptrace/bun/dialect/mysqldialect"
 )
 
 func setupRepository(t *testing.T) (repository.UserRepository, sqlmock.Sqlmock) {
@@ -239,13 +239,7 @@ func setupRepository(t *testing.T) (repository.UserRepository, sqlmock.Sqlmock) 
 		t.Fatalf("failed to create sqlmock: %v", err)
 	}
 
-	db, err := gorm.Open(mysql.New(mysql.Config{
-		Conn:                      mockDB,
-		SkipInitializeWithVersion: true,
-	}), &gorm.Config{})
-	if err != nil {
-		t.Fatalf("failed to open gorm connection: %v", err)
-	}
+	db := bun.NewDB(mockDB, mysqldialect.New())
 
 	rdb, _ := redismock.NewClientMock()
 

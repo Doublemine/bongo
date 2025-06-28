@@ -1,55 +1,60 @@
-<a href="https://trendshift.io/repositories/9047" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9047" alt="go-nunu%2Fnunu | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+# Nunu — A CLI tool for building go applications
 
+Nunu是一个基于Golang的应用脚手架，它的名字来自于英雄联盟中的游戏角色，一个骑在雪怪肩膀上的小男孩。和努努一样，该项目也是站在巨人的肩膀上，它是由Golang生态中各种非常流行的库整合而成的，它们的组合可以帮助你快速构建一个高效、可靠的应用程序。
 
-# Nunu — A CLI tool for building Go applications.
+🚀Tips：这个项目非常完善，所以更新不会很频繁，欢迎大家使用。
 
-Nunu is a scaffolding tool for building Go applications. Its name comes from a game character in League of Legends, a little boy riding on the shoulders of a Yeti. Just like Nunu, this project stands on the shoulders of giants, as it is built upon a combination of popular libraries from the Go ecosystem. This combination allows you to quickly build efficient and reliable applications.
-
-🚀Tips: This project is very complete, so updates will not be very frequent, welcome to use.
-
-- [简体中文介绍](https://github.com/go-nunu/nunu/blob/main/README_zh.md)
+- [英文介绍](https://github.com/go-nunu/nunu/blob/main/README.md)
 - [Português](https://github.com/go-nunu/nunu/blob/main/README_pt.md)
-- [日本語](https://github.com/go-nunu/nunu/blob/main/README_jp.md)
 
 ![Nunu](https://github.com/go-nunu/nunu/blob/main/.github/assets/banner.png)
 
-## Documentation
-* [User Guide](https://github.com/go-nunu/nunu/blob/main/docs/en/guide.md)
-* [Architecture](https://github.com/go-nunu/nunu/blob/main/docs/en/architecture.md)
-* [Getting Started Tutorial](https://github.com/go-nunu/nunu/blob/main/docs/en/tutorial.md)
-* [Unit Testing](https://github.com/go-nunu/nunu/blob/main/docs/en/unit_testing.md)
-* [MCP Server](https://github.com/go-nunu/nunu-layout-mcp/blob/main/README.md)
+## 文档
 
+* [使用指南](https://github.com/go-nunu/nunu/blob/main/docs/zh/guide.md)
+- [分层架构](https://github.com/go-nunu/nunu/blob/main/docs/zh/architecture.md)
+- [详细教程](https://github.com/go-nunu/nunu/blob/main/docs/zh/tutorial.md)
+- [高效编写单元测试](https://github.com/go-nunu/nunu/blob/main/docs/zh/unit_testing.md)
+- [MCP Server](https://github.com/go-nunu/nunu-layout-mcp/blob/main/README_zh.md)
 
-## Features
-- **Gin**: https://github.com/gin-gonic/gin
-- **Gorm**: https://github.com/go-gorm/gorm
-- **Wire**: https://github.com/google/wire
-- **Viper**: https://github.com/spf13/viper
-- **Zap**: https://github.com/uber-go/zap
-- **Golang-jwt**: https://github.com/golang-jwt/jwt
-- **Go-redis**: https://github.com/go-redis/redis
-- **Testify**: https://github.com/stretchr/testify
-- **Sonyflake**: https://github.com/sony/sonyflake
-- **Gocron**:  https://github.com/go-co-op/gocron
-- **Go-sqlmock**:  https://github.com/DATA-DOG/go-sqlmock
-- **Gomock**:  https://github.com/golang/mock
-- **Swaggo**:  https://github.com/swaggo/swag
-- **Casbin**:  https://github.com/casbin/casbin
-- **Pitaya**:  https://github.com/topfreegames/pitaya
-- **MCP-GO**:  https://github.com/mark3labs/mcp-go
+## 功能
+
+- **Gin**: <https://github.com/gin-gonic/gin>
+- **Bun**: <https://github.com/uptrace/bun>
+- **Wire**: <https://github.com/google/wire>
+- **Viper**: <https://github.com/spf13/viper>
+- **Zap**: <https://github.com/uber-go/zap>
+- **Golang-jwt**: <https://github.com/golang-jwt/jwt>
+- **Go-redis**: <https://github.com/go-redis/redis>
+- **Testify**: <https://github.com/stretchr/testify>
+- **Sonyflake**: <https://github.com/sony/sonyflake>
+- **Gocron**:  <https://github.com/go-co-op/gocron>
+- **Go-sqlmock**:  <https://github.com/DATA-DOG/go-sqlmock>
+- **Gomock**:  <https://github.com/golang/mock>
+- **Swaggo**:  <https://github.com/swaggo/swag>
+- **Casbin**:  <https://github.com/casbin/casbin>
+- **Pitaya**:  <https://github.com/topfreegames/pitaya>
+- **MCP-GO**:  <https://github.com/mark3labs/mcp-go>
 
 - More...
 
-## Key Features
-* **Low Learning Curve and Customization**: Nunu encapsulates popular libraries that Gophers are familiar with, allowing you to easily customize the application to meet specific requirements.
-* **High Performance and Scalability**: Nunu aims to be high-performance and scalable. It uses the latest technologies and best practices to ensure that your application can handle high traffic and large amounts of data.
-* **Security and Reliability**: Nunu uses stable and reliable third-party libraries to ensure the security and reliability of your application.
-* **Modular and Extensible**: Nunu is designed to be modular and extensible. You can easily add new features and functionality by using third-party libraries or writing your own modules.
-* **Complete Documentation and Testing**: Nunu has comprehensive documentation and testing. It provides extensive documentation and examples to help you get started quickly. It also includes a test suite to ensure that your application works as expected.
+## 特性
 
-## Concise Layered Architecture
-Nunu adopts a classic layered architecture. In order to achieve modularity and decoupling, it uses the dependency injection framework `Wire`.
+* **超低学习成本和定制**：Nunu封装了Gopher最熟悉的一些流行库。您可以轻松定制应用程序以满足特定需求。
+- **高性能和可扩展性**：Nunu旨在具有高性能和可扩展性。它使用最新的技术和最佳实践，确保您的应用程序可以处理高流量和大量数据。
+- **安全可靠**：Nunu使用了稳定可靠的第三方库，确保您的应用程序安全可靠。
+- **模块化和可扩展**：Nunu旨在具有模块化和可扩展性。您可以通过使用第三方库或编写自己的模块轻松添加新功能和功能。
+- **文档完善和测试完备**：Nunu文档完善，测试完备。它提供了全面的文档和示例，帮助您快速入门。它还包括一套测试套件，确保您的应用程序按预期工作。
+
+## 交流群组
+
+微信入群，请备注Nunu
+
+<p align="left"><img src="https://github.com/go-nunu/nunu/blob/main/.github/assets/qrcode.jpg" width="200"></p>
+
+## 简洁分层架构
+
+Nunu采用了经典的分层架构。同时，为了更好地实现模块化和解耦，采用了依赖注入框架`Wire`。
 
 ![Nunu Layout](https://github.com/go-nunu/nunu/blob/main/.github/assets/layout.png)
 
@@ -57,8 +62,8 @@ Nunu adopts a classic layered architecture. In order to achieve modularity and d
 
 ![Nunu](https://github.com/go-nunu/nunu/blob/main/.github/assets/screenshot.jpg)
 
+## 目录结构
 
-## Directory Structure
 ```
 .
 ├── api
@@ -93,78 +98,101 @@ Nunu adopts a classic layered architecture. In order to achieve modularity and d
 
 ```
 
-The project architecture follows a typical layered structure, consisting of the following modules:
+该项目的架构采用了典型的分层架构，主要包括以下几个模块：
 
-* `cmd`: This module contains the entry points of the application, which perform different operations based on different commands, such as starting the server or executing database migrations. Each sub-module has a `main.go` file as the entry file, as well as `wire.go` and `wire_gen.go` files for dependency injection.
-* `config`: This module contains the configuration files for the application, providing different configurations for different environments, such as development and production.
-* `deploy`: This module is used for deploying the application and includes deployment scripts and configuration files.
-* `internal`: This module is the core module of the application and contains the implementation of various business logic.
+- `cmd`：该模块包含了应用的入口点，根据不同的命令进行不同的操作，例如启动服务器、执行数据库迁移等。每个子模块都有一个`main.go`文件作为入口文件，以及`wire.go`和`wire_gen.go`文件用于依赖注入。
+- `config`：该模块包含了应用的配置文件，根据不同的环境（如开发环境和生产环境）提供不同的配置。
+- `deploy`：该模块用于部署应用，包含了一些部署脚本和配置文件。
+- `internal`：该模块是应用的核心模块，包含了各种业务逻辑的实现。
 
-  - `handler`: This sub-module contains the handlers for handling HTTP requests, responsible for receiving requests and invoking the corresponding services for processing.
+  - `handler`：该子模块包含了处理HTTP请求的处理器，负责接收请求并调用相应的服务进行处理。
 
-  - `job`: This sub-module contains the logic for background tasks.
+  - `job`：该子模块包含了后台任务的逻辑实现。
 
-  - `model`: This sub-module contains the definition of data models.
+  - `model`：该子模块包含了数据模型的定义。
 
-  - `repository`: This sub-module contains the implementation of the data access layer, responsible for interacting with the database.
+  - `repository`：该子模块包含了数据访问层的实现，负责与数据库进行交互。
 
-  - `server`: This sub-module contains the implementation of the HTTP server.
+  - `server`：该子模块包含了HTTP服务器的实现。
 
-  - `service`: This sub-module contains the implementation of the business logic, responsible for handling specific business operations.
+  - `service`：该子模块包含了业务逻辑的实现，负责处理具体的业务操作。
 
-* `pkg`: This module contains some common utilities and functions.
+- `pkg`：该模块包含了一些通用的功能和工具。
 
-* `scripts`: This module contains some script files used for project build, test, and deployment operations.
+- `scripts`：该模块包含了一些脚本文件，用于项目的构建、测试和部署等操作。
 
-* `storage`: This module is used for storing files or other static resources.
+- `storage`：该模块用于存储文件或其他静态资源。
 
-* `test`: This module contains the unit tests for various modules, organized into sub-directories based on modules.
+- `test`：该模块包含了各个模块的单元测试，按照模块划分子目录。
 
-* `web`: This module contains the frontend-related files, such as HTML, CSS, and JavaScript.
+- `web`：该模块包含了前端相关的文件，如HTML、CSS和JavaScript等。
 
-In addition, there are some other files and directories, such as license files, build files, and README. Overall, the project architecture is clear, with clear responsibilities for each module, making it easy to understand and maintain.
+此外，还包含了一些其他的文件和目录，如授权文件、构建文件、README等。整体上，该项目的架构清晰，各个模块之间的职责明确，便于理解和维护。
 
-## Requirements
-To use Nunu, you need to have the following software installed on your system:
+## 要求
 
-* Go 1.19 or higher
-* Git
-* Docker (optional)
-* MySQL 5.7 or higher (optional)
-* Redis (optional)
+要使用Nunu，您需要在系统上安装以下软件：
 
-### Installation
+- Golang 1.19或更高版本
+- Git
+- Docker (可选)
+- MySQL5.7或更高版本(可选)
+- Redis（可选）
 
-You can install Nunu with the following command:
+### 安装
+
+您可以通过以下命令安装Nunu：
 
 ```bash
 go install github.com/go-nunu/nunu@latest
 ```
 
-> Tips: If `go install` succeeds but the `nunu` command is not recognized, it is because the environment variable is not configured. You can add the GOBIN directory to the environment variable.
+国内用户可以使用`GOPROXY`加速`go install`
 
-### Create a New Project
+```
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+```
 
-You can create a new Go project with the following command:
+> tips: 如果`go install`成功，却提示找不到nunu命令，这是因为环境变量没有配置，可以把 GOBIN 目录配置到环境变量中即可
+
+### 创建新项目
+
+您可以使用以下命令创建一个新的Golang项目：
 
 ```bash
+// 推荐新用户选择Advanced Layout
 nunu new projectName
 ```
 
-By default, it pulls from the GitHub source, but you can also use an accelerated repository in China:
+`nunu new`默认拉取github源，你也可以使用国内加速仓库
 
 ```
-// Use the basic template
-nunu new projectName -r https://gitee.com/go-nunu/nunu-layout-basic.git
-// Use the advanced template
+// 使用高级模板(推荐)
 nunu new projectName -r https://gitee.com/go-nunu/nunu-layout-advanced.git
+
+// 使用基础模板
+nunu new projectName -r https://gitee.com/go-nunu/nunu-layout-basic.git
+
 ```
 
-This command will create a directory named `projectName` and generate an elegant Go project structure within it.
+> Nunu内置了两种类型的Layout：
 
-### Create Components
+- **基础模板(Basic Layout)**
 
-You can create handlers, services, repositories, and models for your project using the following commands:
+Basic Layout 包含一个非常精简的架构目录结构，适合非常熟悉Nunu项目的开发者使用。
+
+- **高级模板(Advanced Layout)**
+
+**建议：我们推荐新手优先选择使用Advanced Layout。**
+
+Advanced Layout 包含了很多Nunu的用法示例（ db、redis、 jwt、 cron、 migration等），适合开发者快速学习了解Nunu的架构思想。
+
+此命令将创建一个名为`projectName`的目录，并在其中生成一个优雅的Golang项目结构。
+
+### 创建组件
+
+您可以使用以下命令为项目创建handler、service、repository和model等组件：
 
 ```bash
 nunu create handler user
@@ -172,40 +200,42 @@ nunu create service user
 nunu create repository user
 nunu create model user
 ```
-or
+
+或
+
 ```
 nunu create all user
 ```
 
-These commands will create components named `UserHandler`, `UserService`, `UserRepository`, and `UserModel`, respectively, and place them in the correct directories.
+这些命令将分别创建一个名为`UserHandler`、`UserService`、`UserRepository`和`UserModel`的组件，并将它们放置在正确的目录中。
 
-### Run the Project
+### 启动项目
 
-You can quickly run the project with the following command:
+您可以使用以下命令快速启动项目：
 
 ```bash
 nunu run
 ```
 
-This command will start your Go project and support hot-reloading when files are updated.
+此命令将启动您的Golang项目，并支持文件更新热重启。
 
-### Compile wire.go
+### 编译wire.go
 
-You can quickly compile `wire.go` with the following command:
+您可以使用以下命令快速编译`wire.go`：
 
 ```bash
 nunu wire
 ```
 
-This command will compile your `wire.go` file and generate the required dependencies.
+此命令将编译您的`wire.go`文件，并生成所需的依赖项。
 
-## Contribution
+## 贡献
 
-If you find any issues or have any improvement suggestions, please feel free to raise an issue or submit a pull request. Your contributions are highly appreciated!
+如果您发现任何问题或有任何改进意见，请随时提出问题或提交拉取请求。我们非常欢迎您的贡献！
 
-## License
+## 许可证
 
-Nunu is released under the MIT License. For more information, see the [LICENSE](LICENSE) file.
+Nunu是根据MIT许可证发布的。有关更多信息，请参见[LICENSE](LICENSE)文件。
 
 ## Star History
 

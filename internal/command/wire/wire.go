@@ -9,15 +9,15 @@ import (
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/go-nunu/nunu/internal/pkg/helper"
+	"github.com/doublemine/bongo/internal/pkg/helper"
 	"github.com/spf13/cobra"
 )
 
 var CmdWire = &cobra.Command{
 	Use:     "wire",
-	Short:   "nunu wire [wire.go path]",
-	Long:    "nunu wire [wire.go path]",
-	Example: "nunu wire cmd/server",
+	Short:   "bongo wire [wire.go path]",
+	Long:    "bongo wire [wire.go path]",
+	Example: "bongo wire cmd/server",
 	Run: func(cmd *cobra.Command, args []string) {
 		cmdArgs, _ := helper.SplitArgs(cmd, args)
 		var dir string
@@ -69,9 +69,9 @@ var CmdWire = &cobra.Command{
 }
 var CmdWireAll = &cobra.Command{
 	Use:     "all",
-	Short:   "nunu wire all",
-	Long:    "nunu wire all",
-	Example: "nunu wire all",
+	Short:   "bongo wire all",
+	Long:    "bongo wire all",
+	Example: "bongo wire all",
 	Run: func(cmd *cobra.Command, args []string) {
 		cmdArgs, _ := helper.SplitArgs(cmd, args)
 		var dir string
